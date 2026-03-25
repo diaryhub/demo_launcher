@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0f0f1a;
+    color: #e0e0e0;
+  }
+}
