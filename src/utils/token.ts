@@ -7,6 +7,14 @@ export function parseToken(token: string): Record<string, string> | null {
   }
 }
 
+export function isTokenValid(): boolean {
+  const token = localStorage.getItem('token')
+  if (!token) return false
+  const payload = parseToken(token)
+  if (!payload?.exp) return false
+  return Number(payload.exp) * 1000 > Date.now()
+}
+
 export function getNickname(): string {
   const token = localStorage.getItem('token')
   if (!token) return ''
