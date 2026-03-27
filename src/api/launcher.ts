@@ -29,3 +29,17 @@ export async function fetchVersion(): Promise<VersionInfo> {
   const res = await axios.get<VersionInfo>(`${API_BASE}/api/launcher/version`)
   return res.data
 }
+
+export interface Banner {
+  id: number
+  name: string
+  startTime: string
+  endTime: string
+  cost: number
+  imageUrl: string | null
+}
+
+export async function fetchBanners(): Promise<Banner[]> {
+  const res = await axios.get<Banner[]>(`${API_BASE}/api/launcher/banners`)
+  return res.data
+}

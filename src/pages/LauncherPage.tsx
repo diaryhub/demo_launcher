@@ -4,6 +4,7 @@ import NoticeSection from '../components/NoticeSection'
 import ServerStatus from '../components/ServerStatus'
 import VersionInfo from '../components/VersionInfo'
 import StartButton from '../components/StartButton'
+import BannerSection from '../components/BannerSection'
 
 export default function LauncherPage() {
   const navigate = useNavigate()
@@ -32,8 +33,9 @@ export default function LauncherPage() {
 
       {/* Main */}
       <main className="flex flex-1 gap-0">
-        {/* 좌측: 공지사항 */}
-        <div className="flex-1 p-6">
+        {/* 좌측: 배너 + 공지사항 */}
+        <div className="flex-1 p-6 flex flex-col gap-4">
+          <BannerSection />
           <NoticeSection />
         </div>
 
