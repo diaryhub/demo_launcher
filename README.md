@@ -5,10 +5,6 @@
 
 > 포트폴리오의 핵심은 서버 사이드 설계입니다 → [ServerAPI](https://github.com/diaryhub/ServerAPI)
 
-## 데모
-
-https://demolauncher.vercel.app
-
 ## 기능
 
 - 로그인 / 회원가입 (JWT 인증)
